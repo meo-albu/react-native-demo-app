@@ -8,7 +8,8 @@ export default ({
   return (
     <View>
       <Image 
-        source={{uri, width, height}}
+        source={{uri}}
+        style={{width, height}}
       />
     </View>
   )
