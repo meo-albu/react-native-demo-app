@@ -7,11 +7,12 @@ import Ionicons from '@expo/vector-icons/Ionicons'
 import Home from '../Screens/Home/Home';
 import CarouselScreen from '../Screens/Carousel/CarouselScreen';
 import SliderScreen from '../Screens/Slider/Slider';
+import ListScreen from '../Screens/List/List';
 
 const Drawer = createDrawerNavigator();
 const Navigation = () => {
   return (
-    <Drawer.Navigator initialRouteName='Slider'>
+    <Drawer.Navigator initialRouteName='List'>
       <Drawer.Screen 
         name="Home" 
         component={Home} 
@@ -29,6 +30,12 @@ const Navigation = () => {
         component={SliderScreen} 
         options={{
           drawerIcon: () => <Ionicons name='md-pin-sharp' size={20} color='#ff9980' />
+        }} />
+      <Drawer.Screen 
+        name="List" 
+        component={ListScreen} 
+        options={{
+          drawerIcon: () => <Ionicons name='md-list' size={20} color='#ff9980' />
         }} />
     </Drawer.Navigator>
   )
