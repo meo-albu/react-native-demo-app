@@ -1,24 +1,13 @@
 import React from 'react'
 import { View, Text, StyleSheet } from 'react-native'
-import {createStackNavigator} from '@react-navigation/stack'
 
-const AboutScreenComponent = () => {
+export default () => {
   return (
     <View style={styles.container}>
       <Text style={{color: 'black', fontSize: 18}}>This is a demo app.</Text>
     </View>
   )
 }
-
-
-const Stack = createStackNavigator()
-const AboutScreen = () => (
-  <Stack.Navigator
-    
-  >
-    <Stack.Screen name="About" component={AboutScreenComponent} />
-  </Stack.Navigator>
-)
 
 const styles = StyleSheet.create({
   container: {
@@ -27,6 +16,4 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-});
-
-export default AboutScreen
+})

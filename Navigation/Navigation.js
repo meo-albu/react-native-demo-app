@@ -8,11 +8,15 @@ import Home from '../Screens/Home/Home';
 import CarouselScreen from '../Screens/Carousel/CarouselScreen';
 import SliderScreen from '../Screens/Slider/Slider';
 import ListScreen from '../Screens/List/List';
+import TimepickerScreen from '../Screens/Timepicker/Timepicker';
 
 const Drawer = createDrawerNavigator();
+
 const Navigation = () => {
   return (
-    <Drawer.Navigator initialRouteName='List'>
+    <Drawer.Navigator initialRouteName='Timepicker' screenOptions={{
+        headerShown: true,
+      }}>
       <Drawer.Screen 
         name="Home" 
         component={Home} 
@@ -36,6 +40,12 @@ const Navigation = () => {
         component={ListScreen} 
         options={{
           drawerIcon: () => <Ionicons name='md-list' size={20} color='#ff9980' />
+        }} />
+      <Drawer.Screen 
+        name="Timepicker" 
+        component={TimepickerScreen} 
+        options={{
+          drawerIcon: () => <Ionicons name='md-time' size={20} color='#ff9980' />
         }} />
     </Drawer.Navigator>
   )

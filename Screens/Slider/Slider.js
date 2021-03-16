@@ -1,9 +1,8 @@
 import React, { useState } from 'react'
 import { View, Text, StyleSheet } from 'react-native'
-import {createStackNavigator} from '@react-navigation/stack'
 import Slider from '@react-native-community/slider'
 
-const SliderComponent = ({
+export default ({
     min = 0, max = 100, value = 0, step = 0.01
   }) => {
 
@@ -70,14 +69,3 @@ const SliderComponent = ({
     </View>
   )
 }
-
-
-
-const Stack = createStackNavigator()
-const SliderScreen = () => (
-  <Stack.Navigator>
-    <Stack.Screen name="Slider" component={SliderComponent} />
-  </Stack.Navigator>
-)
-
-export default SliderScreen

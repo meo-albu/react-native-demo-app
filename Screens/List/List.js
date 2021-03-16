@@ -1,13 +1,11 @@
 import React, { useCallback, useState } from 'react'
 import { View, Text, TouchableOpacity } from 'react-native'
-import { createStackNavigator } from '@react-navigation/stack'
 import DraggableFlatList from 'react-native-draggable-flatlist'
 import Ionicons from '@expo/vector-icons/Ionicons'
 
 import { movies } from './data'
-import { Button } from 'native-base'
 
-const ListComponent = ({
+export default ({
     data = movies
   }) => {
 
@@ -73,12 +71,3 @@ const ListComponent = ({
     </View>
   )
 }
-
-const Stack = createStackNavigator()
-const ListScreen = () => (
-  <Stack.Navigator>
-    <Stack.Screen name="List" component={ListComponent} />
-  </Stack.Navigator>
-)
-
-export default ListScreen
