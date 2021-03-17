@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { View, Text, TextInput, StyleSheet, TouchableWithoutFeedback } from 'react-native'
+import { CheckBox } from 'react-native-elements'
 import FormControl from './FormControl'
-import CheckBox from '@react-native-community/checkbox';
 
 const Form = () => {
   const [checked, setChecked] = useState(false)
@@ -26,24 +26,13 @@ const Form = () => {
       </FormControl>
 
       <FormControl label='Password:'>
-        <TouchableWithoutFeedback
+        <CheckBox
+          Component={TouchableWithoutFeedback}
+          checked={checked}
           onPress={() => setChecked(state => !state)}
-          accessible={false}
-        >
-          <View
-            style={{flexDirection: 'row', alignItems: 'center'}}>
-            <CheckBox
-              value={checked}
-              // onChange={() => setChecked(state => !state)}
-              tintColor={'#ff9980'}
-              onTintColor={'#ff9980'}
-              onFillColor={'#ff9980'}
-              onCheckColor={'#ff9980'}
-              tintColors={{true: '#ff9980'}}
-            />
-            <Text>Check this</Text>
-          </View>
-        </TouchableWithoutFeedback>
+          title='Check this'
+          checkedColor='#ff9980'
+        />
       </FormControl>
     </View>
   )
