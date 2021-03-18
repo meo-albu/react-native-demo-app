@@ -10,12 +10,13 @@ import SliderScreen from '../Screens/Slider/Slider';
 import ListScreen from '../Screens/List/List';
 import TimepickerScreen from '../Screens/Timepicker/Timepicker';
 import Form from '../Screens/Form/Form';
+import Tables from '../Screens/Tables/Tables';
 
 const Drawer = createDrawerNavigator();
 
 const Navigation = () => {
   return (
-    <Drawer.Navigator initialRouteName='Form' screenOptions={{
+    <Drawer.Navigator initialRouteName='Tables' screenOptions={{
         headerShown: true,
       }}>
       <Drawer.Screen 
@@ -53,6 +54,12 @@ const Navigation = () => {
         component={Form} 
         options={{
           drawerIcon: () => <Ionicons name='md-reader-sharp' size={20} color='#ff9980' />
+        }} />
+      <Drawer.Screen 
+        name="Tables" 
+        component={Tables} 
+        options={{
+          drawerIcon: () => <Ionicons name='md-grid-sharp' size={20} color='#ff9980' />
         }} />
     </Drawer.Navigator>
   )
