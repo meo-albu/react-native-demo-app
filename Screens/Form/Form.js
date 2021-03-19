@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import {createStackNavigator} from '@react-navigation/stack'
-import { View, TextInput, StyleSheet, TouchableWithoutFeedback, Button, ScrollView, SafeAreaView, TouchableOpacity, Text } from 'react-native'
+import { View, TextInput, StyleSheet, TouchableWithoutFeedback, ScrollView, TouchableOpacity, Text } from 'react-native'
 import { CheckBox } from 'react-native-elements'
 
 import Details from './Details'
@@ -71,7 +71,7 @@ const Form = ({navigation}) => {
 
   return (
     <ScrollView style={{backgroundColor: 'white'}}>
-      <SafeAreaView
+      <View
         style={{flex: 1, padding: 20}}>
 
         <FormControl label='Name:' error={error.name}>
@@ -156,7 +156,7 @@ const Form = ({navigation}) => {
           onPress={handleSubmit}>
           <Text style={{color: 'white', fontWeight: '700'}}>Submit</Text>
         </TouchableOpacity>
-      </SafeAreaView>
+      </View>
     </ScrollView>
   )
 }
