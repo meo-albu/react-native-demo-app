@@ -63,7 +63,6 @@ const Basic = () => {
               }
             </ScrollView>
           </Table>
-
         </View>
       </ScrollView>
     </View>

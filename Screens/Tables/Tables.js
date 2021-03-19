@@ -5,6 +5,7 @@ import Ionicons from '@expo/vector-icons/Ionicons'
 
 import Basic from './Basic'
 import Sortable from './Sortable'
+import Filter from './Filter'
 
 const Tab = createBottomTabNavigator()
 const Tables = () => {
@@ -21,6 +22,10 @@ const Tables = () => {
                 : 'md-grid-outline';
             } else if (route.name === 'Sortable') {
               iconName = focused 
+                ? 'md-arrow-up-circle' 
+                : 'md-arrow-up-circle-outline';
+            } else if (route.name === 'Filter') {
+              iconName = focused 
                 ? 'md-filter' 
                 : 'md-filter-outline';
             }
@@ -35,6 +40,7 @@ const Tables = () => {
       >
         <Tab.Screen name="Basic" component={Basic} options={{title: 'Basic'}} />
         <Tab.Screen name="Sortable" component={Sortable} options={{title: 'Sortable'}} />
+        <Tab.Screen name="Filter" component={Filter} options={{title: 'Filter'}} />
       </Tab.Navigator>
     </View>
   )
