@@ -1,6 +1,6 @@
 ## Quick start
 
-- `yarn install` to install the dependencies
+- `yarn` to install the dependencies
 
 ### Android
 
