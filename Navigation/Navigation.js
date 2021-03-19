@@ -16,7 +16,7 @@ const Drawer = createDrawerNavigator();
 
 const Navigation = () => {
   return (
-    <Drawer.Navigator initialRouteName='Tables' screenOptions={{
+    <Drawer.Navigator initialRouteName='Home' screenOptions={{
         headerShown: true,
       }}>
       <Drawer.Screen 
